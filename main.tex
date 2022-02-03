@@ -1,27 +1,28 @@
-\documentclass{article}
+\documentclass[a4paper]{article}
+\usepackage{xcolor}
+\usepackage{parskip}
 \usepackage{geometry}
-\usepackage{color}
-\geometry{
-  left=0.79in,
-  right=0.79in,
-  voffset=-0.25in,
-  headheight=18pt,
-  headsep=21pt,
-  bottom=0.49in,
+\geometry{%
+  noheadfoot,
+  margin={0.79in, 0.49in},
+  headheight=0.26in,
+  headsep=0.04in,
 }
-\usepackage{fancyhdr}
+\usepackage{autofancyhdr}
 \pagestyle{fancy}
 \renewcommand{\headrulewidth}{0mm}
-\renewcommand{\footrulewidth}{0mm}
-\lhead{\textbf{\Large Weekly Report}}
-\rhead{\textbf{\textcolor{blue}{\huge ViLaB}}}
-\cfoot{}
+\fancyhead[l]{\textbf{\Large Weekly Report}}
+\fancyhead[r]{\textbf{\textcolor{blue}{\huge ViLaB}}}
+\fancyfoot{}
+\fancyfoot[r]{Page \thepage}
 \usepackage{tabu}
-\newcommand{\Name}[1]{\textbf{\large #1}}
 \renewcommand\arraystretch{2}
+\usepackage[pdfusetitle, psdextra]{hyperref}
+\title{main}
+\author{wzy\thanks{USTC}}
+\newcommand{\Name}[1]{\textbf{\large #1}}
 \begin{document}
 
-\noindent
 \begin{tabu}{|X[2.2]|X[4.64]|}
     \hline
     \Name{Name:} & \\
@@ -80,4 +81,5 @@
     }\\
     \hline
 \end{tabu}
+
 \end{document}

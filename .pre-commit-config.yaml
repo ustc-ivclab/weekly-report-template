@@ -1,0 +1,54 @@
+---
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.1.0
+    hooks:
+      - id: check-added-large-files
+      - id: fix-byte-order-marker
+      - id: check-case-conflict
+      - id: check-shebang-scripts-are-executable
+      - id: check-merge-conflict
+      - id: trailing-whitespace
+      - id: mixed-line-ending
+      - id: end-of-file-fixer
+      - id: detect-private-key
+      - id: check-symlinks
+      - id: check-ast
+      - id: debug-statements
+      - id: requirements-txt-fixer
+      - id: check-xml
+      - id: check-yaml
+      - id: check-toml
+      - id: check-json
+  - repo: https://github.com/Lucas-C/pre-commit-hooks
+    rev: v1.1.11
+    hooks:
+      - id: remove-crlf
+  - repo: https://github.com/codespell-project/codespell
+    rev: v2.1.0
+    hooks:
+      - id: codespell
+  - repo: https://github.com/jorisroovers/gitlint
+    rev: v0.17.0
+    hooks:
+      - id: gitlint
+        args: [--ignore=body-is-missing, --msg-filename]
+  - repo: https://github.com/executablebooks/mdformat
+    rev: 0.7.13
+    hooks:
+      - id: mdformat
+        args: [--number]
+        additional_dependencies:
+          - mdformat-gfm
+          - mdformat-tables
+          - mdformat-toc
+          - mdformat-frontmatter
+          - mdformat-deflist
+          - mdformat-black
+          - mdformat-shfmt
+  - repo: https://github.com/DavidAnson/markdownlint-cli2
+    rev: v0.4.0
+    hooks:
+      - id: markdownlint-cli2
+        additional_dependencies:
+          - markdown-it-texmath@0.9.1
