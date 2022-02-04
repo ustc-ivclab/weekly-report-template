@@ -23,7 +23,7 @@ A weekly report template for ViLaB.
 Some changes on the [original template](https://github.com/Freed-Wu/weekly-report-template/releases/tag/v0.0.1):
 
 - Fix typos.
-- Remove the blank lines in header and contents.
+- Remove the blank lines in header.
 
 ### Add PDF Meta Information
 

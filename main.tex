@@ -15,71 +15,68 @@
 \fancyhead[r]{\textbf{\textcolor{blue}{\huge ViLaB}}}
 \fancyfoot{}
 \fancyfoot[r]{Page \thepage}
-\usepackage{tabu}
-\renewcommand\arraystretch{2}
+\usepackage{array}
 \usepackage[pdfusetitle, psdextra]{hyperref}
 \title{main}
 \author{wzy\thanks{USTC}}
 \newcommand{\Name}[1]{\textbf{\large #1}}
+\renewcommand\arraystretch{2}
 \begin{document}
 
-\begin{tabu}{|X[2.2]|X[4.64]|}
-    \hline
-    \Name{Name:} & \\
-    \hline
-    \Name{Project Name:} & \\
-    \hline
-    \Name{Reporting Period:} & \\
-    \hline
-    \multicolumn{2}{|p{\linewidth}|}{\Name{Summary}}\\
-    \hline
-    \multicolumn{2}{|p{\linewidth}|}{%
-      Please provide a short overview (1--2 sentences) of the on-going project,
-        including research purpose, tasks mentioned in the past week,
-        progress/outputs in this week.
+\mbox{}
 
-}\\
-    \hline
-    \multicolumn{2}{|p{\linewidth}|}{\Name{Tasks and Progress}}\\
-    \hline
-    \multicolumn{2}{|p{\linewidth}|}{%
-      Report on tasks outlined in the weekly meeting and describe any changes
-        to this, including the reasons for these. Do include any additional
-        activities undertaken that are not in the work plan, providing the
-        background to their inclusion.
-
-}\\
-    \hline
-    \multicolumn{2}{|p{\linewidth}|}{\Name{Outputs and Deliverables}}\\
-    \hline
-    \multicolumn{2}{|p{\linewidth}|}{%
-      Describe any preliminary results, outputs or deliverables (e.g.
-      presentations, studies, papers)? If no preliminary results are available,
-      state why.
-
-    }\\
-    \hline
-    \multicolumn{2}{|p{\linewidth}|}{\Name{Risk, Issues and Challenges}}\\
-    \hline
-    \multicolumn{2}{|p{\linewidth}|}{%
-      Report on any issues or problems that have impacted on the development
-        and implementation of the project.
-
-    }\\
-    \hline
-    \multicolumn{2}{|p{\linewidth}|}{\Name{Collaboration}}\\
-    \hline
-    \multicolumn{2}{|p{\linewidth}|}{%
+\begin{tabular}{|p{2.2in}|p{4.64in}|}
+  \firsthline
+  \Name{Name:} & \\
+  \hline
+  \Name{Project Name:} & \\
+  \hline
+  \Name{Reporting Period:} & \\
+  \hline
+  \multicolumn{2}{|p{\linewidth}|}{\Name{Summary}}\\
+  \hline
+  \multicolumn{2}{|p{\linewidth}|}{%
+    Please provide a short overview (1--2 sentences) of the on-going project,
+    including research purpose, tasks mentioned in the past week,
+    progress/outputs in this week.
+  }\\
+  \hline
+  \multicolumn{2}{|p{\linewidth}|}{\Name{Tasks and Progress}}\\
+  \hline
+  \multicolumn{2}{|p{\linewidth}|}{%
+    Report on tasks outlined in the weekly meeting and describe any changes
+    to this, including the reasons for these. Do include any additional
+    activities undertaken that are not in the work plan, providing the
+    background to their inclusion.
+  }\\
+  \hline
+  \multicolumn{2}{|p{\linewidth}|}{\Name{Outputs and Deliverables}}\\
+  \hline
+  \multicolumn{2}{|p{\linewidth}|}{%
+    Describe any preliminary results, outputs or deliverables (e.g.
+    presentations, studies, papers)? If no preliminary results are available,
+    state why.
+  }\\
+  \hline
+  \multicolumn{2}{|p{\linewidth}|}{\Name{Risk, Issues and Challenges}}\\
+  \hline
+  \multicolumn{2}{|p{\linewidth}|}{%
+    Report on any issues or problems that have impacted on the development
+    and implementation of the project.
+  }\\
+  \hline
+  \multicolumn{2}{|p{\linewidth}|}{\Name{Collaboration}}\\
+  \hline
+  \multicolumn{2}{|p{\linewidth}|}{%
     Is there any collaboration you have with any parties to run the project
-      tasks? If any; please list them and what type of collaborations you have
-
-    }\\
-    \hline
-    \multicolumn{2}{|p{\linewidth}|}{\Name{Next Steps}}\\
-    \hline
-    \multicolumn{2}{|p{\linewidth}|}{%
-    }\\
-    \hline
-\end{tabu}
+    tasks? If any; please list them and what type of collaborations you have
+  }\\
+  \hline
+  \multicolumn{2}{|p{\linewidth}|}{\Name{Next Steps}}\\
+  \hline
+  \multicolumn{2}{|p{\linewidth}|}{%
+  }\\
+  \lasthline
+\end{tabular}
 
 \end{document}
