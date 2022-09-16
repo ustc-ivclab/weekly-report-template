@@ -17,9 +17,15 @@
 \fancyfoot[r]{Page \thepage}
 \usepackage{array}
 \usepackage[pdfusetitle, psdextra]{hyperref}
-\title{main}
-\author{wzy\thanks{USTC}}
-\newcommand{\Name}[1]{\textbf{\large #1}}
+\title{Weekly Report}
+\ExplSyntaxOn
+\NewDocumentCommand{\Shell}{om}{\sys_get_shell:nnN{#2}{}#1}
+\ExplSyntaxOff
+\Shell[\Name]{git config user.name}
+\Shell[\Email]{git config user.email}
+\newcommand{\Authorname}[0]{\href{mailto:\Email}{\Name}}
+\author{\Authorname\thanks{\href{https://ustc.edu.cn/}{USTC}}}
+\newcommand{\Item}[1]{\textbf{\large #1}}
 \renewcommand\arraystretch{2}
 \begin{document}
 
@@ -27,13 +33,13 @@
 
 \begin{tabular}{|p{2.2in}|p{4.64in}|}
   \firsthline
-  \Name{Name:} & \\
+  \Item{Name:} & \Authorname\\
   \hline
-  \Name{Project Name:} & \\
+  \Item{Project Name:} & \\
   \hline
-  \Name{Reporting Period:} & \\
+  \Item{Reporting Period:} & Week\\
   \hline
-  \multicolumn{2}{|p{\linewidth}|}{\Name{Summary}}\\
+  \multicolumn{2}{|p{\linewidth}|}{\Item{Summary}}\\
   \hline
   \multicolumn{2}{|p{\linewidth}|}{%
     Please provide a short overview (1--2 sentences) of the on-going project,
@@ -41,7 +47,7 @@
     progress/outputs in this week.
   }\\
   \hline
-  \multicolumn{2}{|p{\linewidth}|}{\Name{Tasks and Progress}}\\
+  \multicolumn{2}{|p{\linewidth}|}{\Item{Tasks and Progress}}\\
   \hline
   \multicolumn{2}{|p{\linewidth}|}{%
     Report on tasks outlined in the weekly meeting and describe any changes
@@ -50,7 +56,7 @@
     background to their inclusion.
   }\\
   \hline
-  \multicolumn{2}{|p{\linewidth}|}{\Name{Outputs and Deliverables}}\\
+  \multicolumn{2}{|p{\linewidth}|}{\Item{Outputs and Deliverables}}\\
   \hline
   \multicolumn{2}{|p{\linewidth}|}{%
     Describe any preliminary results, outputs or deliverables (e.g.
@@ -58,21 +64,21 @@
     state why.
   }\\
   \hline
-  \multicolumn{2}{|p{\linewidth}|}{\Name{Risk, Issues and Challenges}}\\
+  \multicolumn{2}{|p{\linewidth}|}{\Item{Risk, Issues and Challenges}}\\
   \hline
   \multicolumn{2}{|p{\linewidth}|}{%
     Report on any issues or problems that have impacted on the development
     and implementation of the project.
   }\\
   \hline
-  \multicolumn{2}{|p{\linewidth}|}{\Name{Collaboration}}\\
+  \multicolumn{2}{|p{\linewidth}|}{\Item{Collaboration}}\\
   \hline
   \multicolumn{2}{|p{\linewidth}|}{%
     Is there any collaboration you have with any parties to run the project
     tasks? If any; please list them and what type of collaborations you have
   }\\
   \hline
-  \multicolumn{2}{|p{\linewidth}|}{\Name{Next Steps}}\\
+  \multicolumn{2}{|p{\linewidth}|}{\Item{Next Steps}}\\
   \hline
   \multicolumn{2}{|p{\linewidth}|}{%
   }\\
