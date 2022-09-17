@@ -1,13 +1,11 @@
 # Weekly Report Template
 
-[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
-[![Gitmoji](https://img.shields.io/badge/gitmoji-%20%F0%9F%98%9C%20%F0%9F%98%8D-FFDD67.svg?style=flat-square)](https://gitmoji.dev)
-
-A weekly report template for ViLaB.
+A weekly report template for ViLaB. A blank template can be found in
+[template](https://github.com/Freed-Wu/weekly-report-template/tree/template).
 
 ## Settings
 
-``` tex
+```tex
 \geometry{%
   noheadfoot,
   margin={0.79in, 0.49in},
@@ -27,14 +25,31 @@ Some changes on the [original template](https://github.com/Freed-Wu/weekly-repor
 
 ### Add PDF Meta Information
 
-``` tex
+```tex
 \usepackage[pdfusetitle, psdextra]{hyperref}
-\title{main}
-\author{wzy\thanks{USTC}}
+\title{YourTitle}
+\author{YourName\thanks{USTC}}
 ```
 
-``` shell
-$ pdfinfo main.pdf|rg Title\|Author
-Title:           main
-Author:          wzy
+```shell
+$ pdfinfo main.pdf | grep -E Title\|Author
+Title:           YourTitle
+Author:          YourName
+```
+
+### Fill User Name Automatically
+
+```tex
+\ExplSyntaxOn
+\NewDocumentCommand{\Shell}{om}{\sys_get_shell:nnN{#2}{}#1}
+\ExplSyntaxOff
+\Shell[\Name]{git config user.name}
+\Shell[\Email]{git config user.email}
+\newcommand{\Authorname}[0]{\href{mailto:\Email}{\Name}}
+\author{\Authorname\thanks{\href{https://ustc.edu.cn/}{USTC}}}
+```
+
+```sh
+git config user.name YourName
+git config user.email YourEmail
 ```
