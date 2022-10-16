@@ -1,0 +1,74 @@
+\documentclass[a4paper]{article}
+\usepackage{xcolor}
+\usepackage{parskip}
+\usepackage{geometry}
+\geometry{%
+  },
+  headheight=0.26in,
+  headsep=0.04in,
+}
+\usepackage{autofancyhdr}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0mm}
+\fancyhead[l]{\textbf{\Large Weekly Report}}
+\fancyhead[r]{\textbf{\textcolor{blue}{\huge ViLaB}}}
+\fancyfoot{}
+\fancyfoot[r]{Page \thepage}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage[pdfusetitle, psdextra]{hyperref}
+\title{Weekly Report}
+\ExplSyntaxOn
+\NewDocumentCommand{\Shell}{om}{\sys_get_shell:nnN{#2}{}#1}
+\ExplSyntaxOff
+\Shell[\Name]{git config user.name}
+\Shell[\Email]{git config user.email}
+\newcommand{\Authorname}[0]{\href{mailto:\Email}{\Name}}
+\author{\Authorname\thanks{\href{https://ustc.edu.cn/}{USTC}}}
+\newcommand{\Item}[1]{\textbf{\large #1}}
+\renewcommand\arraystretch{2}
+\begin{document}
+
+\mbox{}
+
+\begin{longtable}{|p{2.2in}|p{4.64in}|}
+  \firsthline
+  \Item{Name:} & \Authorname\\
+  \hline
+  \Item{Project Name:} & \\
+  \hline
+  \Item{Reporting Period:} & Week\\
+  \hline
+  \multicolumn{2}{|p{\linewidth}|}{\Item{Summary}}\\
+  \hline
+  \multicolumn{2}{|p{\linewidth}|}{%
+  }\\
+  \hline
+  \multicolumn{2}{|p{\linewidth}|}{\Item{Tasks and Progress}}\\
+  \hline
+  \multicolumn{2}{|p{\linewidth}|}{%
+  }\\
+  \hline
+  \multicolumn{2}{|p{\linewidth}|}{\Item{Outputs and Deliverables}}\\
+  \hline
+  \multicolumn{2}{|p{\linewidth}|}{%
+  }\\
+  \hline
+  \multicolumn{2}{|p{\linewidth}|}{\Item{Risk, Issues and Challenges}}\\
+  \hline
+  \multicolumn{2}{|p{\linewidth}|}{%
+  }\\
+  \hline
+  \multicolumn{2}{|p{\linewidth}|}{\Item{Collaboration}}\\
+  \hline
+  \multicolumn{2}{|p{\linewidth}|}{%
+  }\\
+  \hline
+  \multicolumn{2}{|p{\linewidth}|}{\Item{Next Steps}}\\
+  \hline
+  \multicolumn{2}{|p{\linewidth}|}{%
+  }\\
+  \lasthline
+\end{longtable}
+
+\end{document}
