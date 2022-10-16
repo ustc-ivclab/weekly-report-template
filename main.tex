@@ -24,7 +24,8 @@
 \ExplSyntaxOff
 \Shell[\Name]{git config user.name}
 \Shell[\Email]{git config user.email}
-\newcommand{\Authorname}[0]{\href{mailto:\Email}{\Name}}
+\usepackage{xspace}
+\newcommand{\Authorname}[0]{\href{mailto:\Email}{\Name}\xspace}
 \author{\Authorname\thanks{\href{https://ustc.edu.cn/}{USTC}}}
 \newcommand{\Item}[1]{\textbf{\large #1}}
 \renewcommand\arraystretch{2}
