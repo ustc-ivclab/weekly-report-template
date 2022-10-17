@@ -5,7 +5,7 @@ default: all
 all: template.tex images/main-1.png
 
 template.tex: main.tex
-	perl -0pe's/(?<=\{%\n)[^}]*/  /g' $< > $@
+	perl -0pe's/(?<=\\multicolumn\{2\}\{\|p\{\\linewidth\}\|\}\{%\n)(.|\n)*?(?=  \}\\\\)//g' $< > $@
 
 main.pdf: main.tex
 	git config user.name "display the output of \`git config user.name' and url is \`git config user.email'"
