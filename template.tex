@@ -17,16 +17,12 @@
 \fancyfoot[r]{Page \thepage}
 \usepackage{array}
 \usepackage{longtable}
-\usepackage[pdfusetitle, psdextra]{hyperref}
 \title{Weekly Report}
-\ExplSyntaxOn
-\NewDocumentCommand{\Shell}{om}{\sys_get_shell:nnN{#2}{}#1}
-\ExplSyntaxOff
-\Shell[\Name]{git config user.name}
-\Shell[\Email]{git config user.email}
 \usepackage{xspace}
-\newcommand{\Authorname}[0]{\href{mailto:\Email}{\Name}\xspace}
-\author{\Authorname\thanks{\href{https://ustc.edu.cn/}{USTC}}}
+\usepackage{hyperref}
+\makeatletter
+\newcommand{\Authorname}[0]{\@author\xspace}
+\makeatother
 \newcommand{\Item}[1]{\textbf{\large #1}}
 \renewcommand\arraystretch{2}
 \begin{document}

@@ -1,3 +1,4 @@
+#!/usr/bin/env -S make -f
 .PHONY: default
 default: all
 
@@ -5,11 +6,11 @@ default: all
 all: template.tex images/main-1.png
 
 template.tex: main.tex
-	perl -0pe's/(?<=\\multicolumn\{2\}\{\|p\{\\linewidth\}\|\}\{%\n)(.|\n)*?(?=  \}\\\\)//g' $< > $@
+	scripts/generate-template.tex.pl $< > $@
 
 main.pdf: main.tex
 	git config user.name "display the output of \`git config user.name' and url is \`git config user.email'"
-	latexmk -pvc- main.tex
+	latexmk -gg -pvc- main.tex
 	git config --unset user.name
 
 images/main-1.png: main.pdf
