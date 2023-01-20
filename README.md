@@ -45,3 +45,9 @@ $ kpsewhich --var-value TEXMFCONFIG
 $ kpsewhere hyperref.cfg
 /home/wzy/.texlive/texmf-config/tex/latex/hyperref/hyperref.cfg
 ```
+
+## Build
+
+```sh
+latexmk
+```
