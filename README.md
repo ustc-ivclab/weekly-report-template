@@ -26,7 +26,7 @@
 ![github/repo-size](https://shields.io/github/repo-size/Freed-Wu/weekly-report-template)
 ![github/v](https://shields.io/github/v/release/Freed-Wu/weekly-report-template)
 
-A weekly report template for ViLaB.
+A weekly report template.
 
 ![preview](images/main-1.png)
 
@@ -41,9 +41,9 @@ $ kpsewhere hyperref.cfg
 ./hyperref.cfg
 $ cd ..
 $ kpsewhich --var-value TEXMFCONFIG
-/home/wzy/.texlive/texmf-config
+/home/your_name/.texlive/texmf-config
 $ kpsewhere hyperref.cfg
-/home/wzy/.texlive/texmf-config/tex/latex/hyperref/hyperref.cfg
+/home/your_name/.texlive/texmf-config/tex/latex/hyperref/hyperref.cfg
 ```
 
 ## Build
